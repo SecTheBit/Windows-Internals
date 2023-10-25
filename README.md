@@ -1,5 +1,6 @@
 # Windows-Internals
-Learnings about windows Internals 
+Learnings about windows Internals from malware development/reversing purpose. :) 
+I will cover only those topics which are necessary in maldev . Hope it helps to Red Teamers.!!
 
 ## Day 1
 
