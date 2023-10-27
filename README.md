@@ -21,3 +21,7 @@ I will cover only those topics which are necessary in maldev . Hope it helps to 
   - context switching
   - Driver Signing
 - Brief Introduction to Windows Registry
+
+## Day 3
+- Viewing Exported functions of a DLL file using Dependency Walker
+- Kernel Debugging (Locally) using WinDbg
