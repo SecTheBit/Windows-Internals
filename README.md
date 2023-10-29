@@ -28,4 +28,4 @@ I will cover only those topics which are necessary in maldev . Hope it helps to 
 
 ## Day 4
 - System architecture
-- How Hypervisior helps in protecting system from malicious kernel drivers
+- How Hypervisor helps in protecting system from malicious kernel drivers
