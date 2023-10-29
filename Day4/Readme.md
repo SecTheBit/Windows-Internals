@@ -18,3 +18,28 @@ The kernel-mode components consist of following things:
 - Device Drivers: It includes both hardware and non-hardware drivers.
 - Hardware Abstraction Layer: This is a layer of code that isolates the kernel, the device drivers, and the rest of the Windows executive from platform-specific hardware differences
 - Hypervisor layer: Hypervisor itself.
+
+#### Hypervisor
+- All modern solutions employ the use of a hypervisor, which is a specialized and highly privileged component that allows for the virtualization and isolation of all resources on the machine, from virtual to physical memory, to device interrupts, and even to PCI and USB devices
+- Hypervisor has more access to OS than kernel itself
+- It can protect and monitor a single host instance to offer assurances and guarantees beyond what the kernel provides
+- In Windows 10, Microsoft now leverages the Hyper-V hypervisor to
+- provide a new set of services known as virtualization-based security (VBS):
+  - Device Guard
+  - Hyper Guard
+  - Credential Guard
+  - Application Guard
+- The key advantage of all these technologies is that unlike previous kernel-based security improvements, they are not vulnerable to malicious or badly written drivers, regardless of whether 
+   they are signed or not
+- This makes them highly resilient against today’s advanced adversaries. This is possible due to the hypervisor’s implementation of Virtual Trust Levels (VTLs).
+- Because the normal operating system and its components are in a less privileged mode (VTL 0), but these VBS technologies run at VTL 1 (a higher privilege), they cannot be affected even by 
+  kernel mode code, even if there is some malicious code running in the kernel.
+  ![image](https://github.com/SecTheBit/Windows-Internals/assets/46895441/4cf7b4a5-cf23-4d58-8f5a-a08295cc32fa)
+
+- the regular user versus kernel rules apply, but are now augmented by VTL considerations.In other words, kernel-mode code running at VTL 0 cannot touch user mode running at VTL 1 becauseVTL 
+  1 is more privileged. Yet, user-mode code running at VTL 1 cannot touch kernel mode running at VTL 0 either because user (ring 3) cannot touch kernel (ring 0)
+
+#### Environment subsytems and subsystems DLLs
+- The role of an environment subsystem is to expose some subset of the base Windows executive system services to application programs. Each subsystem can provide access to different subsets of the native services in Windows.
+- Each executable image (.exe) is bound to one and only one subsystem
+  
