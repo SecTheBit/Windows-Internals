@@ -25,3 +25,7 @@ I will cover only those topics which are necessary in maldev . Hope it helps to 
 ## Day 3
 - Viewing Exported functions of a DLL file using Dependency Walker
 - Kernel Debugging (Locally) using WinDbg
+
+## Day 4
+- System architecture
+- How Hypervisior helps in protecting system from malicious kernel drivers
