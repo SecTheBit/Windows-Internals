@@ -29,3 +29,6 @@ I will cover only those topics which are necessary in maldev . Hope it helps to 
 ## Day 4
 - System architecture
 - How Hypervisor helps in protecting system from malicious kernel drivers
+
+## Day 5
+- CreateProcess Function Explained
