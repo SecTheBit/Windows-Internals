@@ -1,4 +1,4 @@
-## Process and Jobs
+# Process and Jobs
 
 ### Process Environment Block
 - The PEB is a structure which holds data about the current process under it’s field values – some fields being structures themselves to hold even more data.
@@ -36,3 +36,16 @@ The PEB Structure contains the following elements
 3. Ldr : Pointer to PEB_LDR_DATA structure that contains information about the loaded modules for the process.
 4. Process Parameters: A pointer to an RTL_USER_PROCESS_PARAMETERS structure that contains process parameter information such as the command line
 5. All the other elements are reserved for internal purpose only. Refer here https://learn.microsoft.com/en-us/windows/win32/api/winternl/ns-winternl-peb
+
+### Image Loader
+- A loader is a type of program that is responsible for loading programs and libraries into memory,and linking together all the necessary dependencies to run an application
+- when a process is started on the system, the kernel creates a process object to represent it and performs various kernel-related initialization tasks, these tasks are performed by the image loader.
+- The image loader lives in the user-mode system DLL Ntdll.dll and not in the kernel library. Therefore, it behaves just like standard code that is part of a DLL, and it is subject to the same restrictions in terms of memory access and security rights.
+- The image loader will always be present in the running process
+
+
+## Jobs
+- Jobs function is to control one or more than one process called as group.
+- A job object’s basic function is to allow groups of processes to be managed and manipulated as a unit.
+- A job object is created using the ```CreateJobObject``` API
+  
