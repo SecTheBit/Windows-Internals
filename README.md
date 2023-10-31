@@ -32,3 +32,7 @@ I will cover only those topics which are necessary in maldev . Hope it helps to 
 
 ## Day 5
 - CreateProcess Function Explained
+
+## Day 6
+- Process Environment Block
+- Basic Info about Jobs
