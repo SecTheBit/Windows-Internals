@@ -36,3 +36,17 @@ I will cover only those topics which are necessary in maldev . Hope it helps to 
 ## Day 6
 - Process Environment Block
 - Basic Info about Jobs
+
+## Day 7
+- Memory Management
+  - Introuction to Memory Managment
+    - Virtual Address Space
+    - Page
+    - Paging
+  - Memory Manager
+    - Memory Related Windows API
+    - Shared Memory and Mapped Files
+  - Data Execution Policy
+    - Introduction
+    - Viewing DEP Status using Process Explorer
+    - DEP Status Values Description
