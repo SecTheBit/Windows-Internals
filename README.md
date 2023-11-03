@@ -50,3 +50,8 @@ I will cover only those topics which are necessary in maldev . Hope it helps to 
     - Introduction
     - Viewing DEP Status using Process Explorer
     - DEP Status Values Description
+## Day 8
+- Heaps
+  - Introduction
+  - Types
+  - Viewing Structure of Heap using WinDBG
