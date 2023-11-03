@@ -51,6 +51,10 @@ I will cover only those topics which are necessary in maldev . Hope it helps to 
     - Viewing DEP Status using Process Explorer
     - DEP Status Values Description
 ## Day 8
+- System Memory Pools
+  - Paged Pool
+  - Non Paged Pool
+  - APIs used for allocating memory with kernel memory pool
 - Heaps
   - Introduction
   - Types
