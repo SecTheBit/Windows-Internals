@@ -59,3 +59,12 @@ I will cover only those topics which are necessary in maldev . Hope it helps to 
   - Introduction
   - Types
   - Viewing Structure of Heap using WinDBG
+## Day 9
+- Virtual Address Space
+  - Types of data mapped to Virtual Address Space
+  - x86 Address Space Layout
+    - x86 System Address Space Layout
+    - x86 Session Space
+  - System Virtual Address Space Quotas
+  - User Address Space layout
+    - Analyzing user virtual address space using VMMap
