@@ -1,7 +1,7 @@
 ## Memory Management
 
 ### Virtual Address Space 
-- There are 3 main types of data that are mapped to vistrual space:
+- There are 3 main types of data that are mapped to virtual space:
   - Per-Process private code and data : Each process has a private address space that cannot be accessed by other processes. That is, a virtual address is always evaluated in the context of the current process and cannot refer to an address defined by any other process.
   - Session Wide Code and Data : A session consists of the processes and other system objects such as the window station, desktops, and windows that represent a single user’s logon session.Each session has a session-specific paged pool area used by the kernel-mode portion of the Windows subsystem (Win32k.sys) to allocate session-private GUI data structures.
   - System Wide Code and Data : System space contains global operating system code and data structures visible by kernel-mode code regardless of which process is currently executing
@@ -43,4 +43,14 @@
 
 ### User address space layout
 - Just as address space in the kernel is dynamic, the user address space is also built dynamically. The addresses of the thread stacks, process heaps, and loaded images (such as DLLs and an application’s executable) are dynamically computed (if the application and its images support it) through the ASLR mechanism.
-- 
+
+#### Analyzing user virtual address space using VMMap
+- Following things will be shown in VMMap
+  - Image : This displays memory allocations used to map the executable and its dependencies (such as dynamic libraries) and any other memory-mapped image (portable executable format) files
+  - Mapped file: This displays memory allocations for memory mapped data files
+  - Shareable : This displays memory allocations marked as shareable, typically including shared memory (but not memory-mapped files, which are listed under either Image or Mapped File).
+  - Heap : This displays memory allocated for the heap(s) that this process owns
+  - Managed Heap: This displays memory allocated by the .NET CLR
+  - Stack : This displays memory allocated for the stack of each thread in this process
+  - Private Data : This displays memory allocations marked as private other than the stack and heap, such as internal data structures.
+![POC](https://github.com/SecTheBit/Windows-Internals/assets/46895441/1dbf0a25-7e7e-40de-83a1-c49044dc4866)
